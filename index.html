@@ -10,20 +10,20 @@
     </head>
     <body>
         <header>
-            <h1>Nombre Apellido</h1>
+            <h1>Raúl Berríos</h1>
         </header>
         <main>
-            <p>Preséntate en este párrafo, compartiendo la razón por la que tomas este Electivo. Intenta ser breve. Este párrafo tiene treinta palabras. Tú puedes agregar más, pero evita superar las cincuenta.</p>
+            <p>Me llamo Raúl Berríos, tengo 21 años y he tomado este electivo porque creo que es fundamental para mi formación como diseñador el saber como programar y crear páginas web, pues es algo a lo que creo que me enfrentaré muchas veces en el futuro</p>
         </main>     
         <footer>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
         <script>
-            var alternativas = ["perro", "gato", "tigre", "elefante"];
+            var alternativas = ["zanahoria", "manzana", "frutilla", "sandia"];
             function setup() {
                 var lugar = select("footer");
                 var alternativa = random(alternativas);
-                createA("page.html"+"?dibuja="+alternativa, "Dibuja un " + alternativa).parent(lugar);
+                createA("page.html"+"?dibuja="+alternativa, "Dibuja una " + alternativa).parent(lugar);
                 noCanvas();
             }
         </script>
