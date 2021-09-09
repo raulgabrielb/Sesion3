@@ -16,13 +16,17 @@
             var que = new URLSearchParams(window.location.search).get("dibuja");
             document.querySelector("h1").textContent += que;
             document.querySelector("a").textContent += que;
-            function setup() {
-                var d = select("#descarga");
+               function setup() {
+                var d = select("#aqui");
                 d.mousePressed(artemania);
                 createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", -1);
-                background(255);
+                background(240);
+                elColor = createColorPicker("#777777").parent("controles");
+                elSlider = createSlider(1, 5, 3).parent("controles");
             }
             function draw() {
+                stroke(elColor.color());
+                strokeWeight(elSlider.value());
                 if (mouseIsPressed) {
                     line(pmouseX, pmouseY, mouseX, mouseY);
                 }
